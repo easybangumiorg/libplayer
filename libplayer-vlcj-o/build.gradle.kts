@@ -3,7 +3,6 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 plugins {
     alias(libs.plugins.kotlinJvm)
     alias(libs.plugins.composeCompiler)
-    alias(libs.plugins.composeCompiler)
 }
 
 group = "org.easybangumi.next"
@@ -20,5 +19,9 @@ java {
 
 dependencies {
     implementation(libs.vlcj)
+    implementation(projects.libplayerApi)
 
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.datetime)
+    implementation(libs.kotlinx.coroutines.swing)
 }

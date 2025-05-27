@@ -34,6 +34,8 @@ plugins {
 
 
 include(":libplayer-api")
-include(":libplayer-vlc")
+include(":libplayer-vlcj")
+//include(":libplayer-render")
+
 //include(":composeApp")
 //include(":shared")
