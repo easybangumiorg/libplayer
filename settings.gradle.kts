@@ -35,6 +35,7 @@ plugins {
 
 include(":libplayer-api")
 include(":libplayer-vlcj")
+include(":libplayer-vlcj-example")
 //include(":libplayer-render")
 
 //include(":composeApp")

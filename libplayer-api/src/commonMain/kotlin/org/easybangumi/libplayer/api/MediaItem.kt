@@ -6,15 +6,13 @@ package org.easybangumi.libplayer.api
 data class MediaItem(
     val id: String = C.DEFAULT_ID,
     val uri: String,
-    val mineType: String = C.MINE_TYPE_UNKNOWN,
+//    val mineType: String = C.MINE_TYPE_UNKNOWN,
     // 透传给播放引擎
     val optional: Map<String, Any> = emptyMap(),
     // TODO 字幕加载
     val subtitleConfigs: List<SubtitleConfig> = emptyList(),
 ) {
 
-    companion object {
-    }
 
     data class SubtitleConfig(
         val id: String,

@@ -4,7 +4,8 @@ import kotlinx.coroutines.flow.StateFlow
 import org.easybangumi.libplayer.api.action.Action
 
 /**
- * 播放器桥接接口，只提供基本功能，一次只播放一个 MediaItem，如果需要多集连播等需要业务自己实现
+ * 播放器桥接接口，用于在 Common 层中与播放器进行交互
+ * 各平台需要自己实现
  * Created by heyanlin on 2025/5/27.
  */
 interface PlayerBridge: AutoCloseable {

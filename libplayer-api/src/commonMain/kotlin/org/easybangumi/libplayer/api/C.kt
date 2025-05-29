@@ -32,13 +32,17 @@ object C {
     )
 
     enum class RendererScaleType {
-        SCALE_DEFAULT,              // 默认，原始尺寸
+        // 保持宽高比
+        SCALE_SOURCE,              // 默认，原始尺寸
         SCALE_16_9,                 // 16/9
         SCALE_4_3,                  // 4/3
-        SCALE_MATCH_PARENT,         // 拉伸
+        SCALE_ADAPT,                // 适应屏幕，保持宽高比
+        SCALE_FOR_HEIGHT,            // 以高度为准
+        SCALE_FOR_WIDTH,             // 以宽度为准
         SCALE_CENTER_CROP,          // 平铺，从中心裁切，保证占满屏幕
-        SCALE_ADAPT,                // 保证长或宽与屏幕相等，比例不变
-        CALE_FOR_HEIGHT,            // 以高度为准
+
+        SCALE_MATCH_PARENT,         // 拉伸
+
     }
 
 

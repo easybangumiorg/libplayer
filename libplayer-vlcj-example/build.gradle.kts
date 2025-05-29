@@ -24,6 +24,7 @@ java {
 dependencies {
     implementation(libs.vlcj)
     implementation(projects.libplayerApi)
+    implementation(projects.libplayerVlcj)
 
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.datetime)
@@ -33,14 +34,25 @@ dependencies {
     implementation(compose.foundation)
     implementation(compose.desktop.currentOs)
 
-    testImplementation(kotlin("test"))
-    testImplementation(compose.desktop.uiTestJUnit4)
-    implementation(compose.uiTest)
 
 
 
 }
 
-tasks.test {
-    useJUnitPlatform() // 启用 JUnit 5
+compose.desktop {
+    application {
+        mainClass = "org.easybangumi.libplayer.MainKt"
+
+
+        nativeDistributions {
+            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
+            packageName = "org.easybangumi.libplayer"
+            packageVersion = "1.0.0"
+
+        }
+        buildTypes.release.proguard {
+            isEnabled.set(false)
+        }
+    }
 }
+
